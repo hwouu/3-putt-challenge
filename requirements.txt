@@ -1,7 +1,5 @@
 numpy>=1.21.0
 Pillow>=9.0.0
-adafruit-circuitpython-rgb-display>=3.10.0
-RPi.GPIO>=0.7.0
+pygame>=2.5.0
 pytest>=7.0.0
 black>=22.0.0
-pygame>=2.5.0  # For desktop development
