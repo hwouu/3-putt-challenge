@@ -32,9 +32,9 @@ IMAGES_DIR = os.path.join(ASSETS_DIR, 'images')
 # Platform detection
 def is_raspberry_pi():
     try:
-        import board
-        return True
-    except ImportError:
+        with open('/proc/cpuinfo', 'r') as f:
+            return any('Raspberry Pi' in line for line in f)
+    except:
         return False
 
 IS_RASPBERRY_PI = is_raspberry_pi()
